@@ -1,0 +1,14 @@
+esprit_user:
+    resource: "@EspritUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+espritproduit:
+    resource: "@EspritproduitBundle/Resources/config/routing_categorie.yml"
+    prefix:   /Admin/Categorie
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+espritarticle:
+    resource: "@EspritproduitBundle/Resources/config/routing_article.yml"
+    prefix:   /Admin/Article

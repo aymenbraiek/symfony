@@ -1,0 +1,22 @@
+
+index_article:
+    path:     /index
+    defaults: { _controller: EspritproduitBundle:Article:index }
+
+edit_article:
+    path:     /edit
+    defaults: { _controller: EspritproduitBundle:Article:edit }
+
+delete_article:
+    path:     /delete
+    defaults: { _controller: EspritproduitBundle:Article:delete }
+
+new_article:
+    path:     /new
+    defaults: { _controller: EspritproduitBundle:Article:new }
+search_article:
+    path:     /search/{id}
+    defaults: { _controller: EspritproduitBundle:Article:rechercherByArticle }
+email_article:
+    path:     /mailing
+    defaults: { _controller: EspritproduitBundle:Article:ContactArticle}

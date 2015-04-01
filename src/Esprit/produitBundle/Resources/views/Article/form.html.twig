@@ -1,0 +1,60 @@
+
+		<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header" data-original-title>
+						<h2><i class="halflings-icon edit"></i><span class="break"></span>Article</h2>
+						<div class="box-icon">
+							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
+							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
+							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<form class="form-horizontal" method="POST" {{ form_enctype(form) }}>
+                                                    {{form_errors(form)}}
+						  <fieldset>
+							<div class="control-group">
+                                                            {{form_label(form.nom,' nom',{'label_attr':{'class' : 'control-label'}})}}
+							 
+							  <div class="controls">
+								{{form_widget(form.nom)}}
+                                                           </div>
+							</div>
+                                                           <div class="control-group">
+                                                            {{form_label(form.qtn,' QTN',{'label_attr':{'class' : 'control-label'}})}}
+							 
+							  <div class="controls">
+								{{form_widget(form.qtn)}}
+                                                           </div>
+							</div>
+                                                           <div class="control-group">
+                                                            {{form_label(form.prix,'Prix',{'label_attr':{'class' : 'control-label'}})}}
+							 
+							  <div class="controls">
+								{{form_widget(form.prix)}}
+                                                           </div>
+							</div>
+							
+                                                         
+                                                            <div class="control-group">
+                                                            {{form_label(form.categorie,'Categorie',{'label_attr':{'class' : 'control-label'}})}}
+							 
+							  <div class="controls">
+								{{form_widget(form.categorie)}}
+                                                           </div>
+							</div>
+							
+                                                           {{form_rest(form)}}
+                                                    
+							
+							<div class="form-actions">
+							  <input type="submit" class="btn btn-primary" />
+							  <button type="reset" class="btn">Cancel</button>
+							</div>
+						  </fieldset>
+						</form>   
+
+					</div>
+				</div><!--/span-->
+
+			</div><!--/row-->

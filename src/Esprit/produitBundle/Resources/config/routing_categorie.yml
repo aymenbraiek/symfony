@@ -1,0 +1,12 @@
+produit_categories_index:
+    path:     /index
+    defaults: { _controller: EspritproduitBundle:Categorie:index }
+produit_categories_edit:
+    path:     /edit/{token}
+    defaults: { _controller: EspritproduitBundle:Categorie:edit }
+produit_categories_delete:
+    path:     /delete/{token}
+    defaults: { _controller: EspritproduitBundle:Categorie:delete }
+produit_categories_new:
+    path:     /new
+    defaults: { _controller: EspritproduitBundle:Categorie:new }

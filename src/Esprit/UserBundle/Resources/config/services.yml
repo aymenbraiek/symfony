@@ -1,0 +1,9 @@
+services:
+    esprit_user_registration.registration.form.type:
+        class: Esprit\UserBundle\Form\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            -
+                name: form.type
+                alias: esprit_user_registration
+          
