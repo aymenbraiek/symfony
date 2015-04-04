@@ -77,7 +77,7 @@ class ArticleController extends Controller {
         return new Response('valide');
     }
 
-    public function supprimerArticleAction(Article $article) {
+    public function deleteAction(Article $article) {
         $form = $this->createFormBuilder()->getForm();
         $request = $this->get('request');
         if ($request->getMethod() == 'POST') {
@@ -91,7 +91,7 @@ class ArticleController extends Controller {
                 $em->flush();
 
                 $this->get('session')->getFlashBag()->add('info', 'article bien supprimé (' . $article->getTitre() . ').');
-                return $this->redirect($this->generateUrl('pfe_article_accueil'));
+                return $this->redirect($this->generateUrl('index_article'));
             }
         }
         return $this->render('PFEPageBundle:Backend:Page/Article/supprimer.html.twig', array('article' => $article, 'form' => $form->createView(),));
