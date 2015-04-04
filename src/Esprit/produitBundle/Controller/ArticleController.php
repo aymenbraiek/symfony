@@ -94,7 +94,7 @@ class ArticleController extends Controller {
                 return $this->redirect($this->generateUrl('index_article'));
             }
         }
-        return $this->render('PFEPageBundle:Backend:Page/Article/supprimer.html.twig', array('article' => $article, 'form' => $form->createView(),));
+        return $this->render('SymfonyEspritBundle:delee.html.twig', array('article' => $article, 'form' => $form->createView(),));
     }
 
 }
